@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Footer } from '../footer/footer';
 import { Counter } from '../counter/counter';
+import { Profile } from "../profile/profile";
 
 @Component({
   selector: 'app-home',
-  imports: [Footer, Counter],
+  imports: [Footer, Counter, Profile],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

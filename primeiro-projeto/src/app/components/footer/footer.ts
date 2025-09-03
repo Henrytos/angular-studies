@@ -15,7 +15,7 @@ export class Footer implements OnInit {
   }
 
   ngOnInit(): void {
-    setInterval(() => {
+    setTimeout(() => {
       this.name += " franz"
     }, 2000)
   }
