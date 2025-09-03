@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -9,26 +9,26 @@ import { Component } from '@angular/core';
 })
 export class Counter {
 
-  private count: number = 0;
+  private count = signal(0);
 
   public onClick() {
-    this.count++
+    this.count.update(target => target + 1)
   }
 
   public onClickButtonReset() {
-    this.count = 0;
+    this.count.set(0);
   }
 
   get getCount(): number {
-    return this.count
+    return this.count();
   }
 
   public onClickButtonPlus() {
-    this.count++;
+    this.count.update(target => target + 1)
   }
 
   public onClickButtonMinus() {
-    this.count--;
+    this.count.update(target => target - 1)
   }
 
 }

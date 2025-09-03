@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Footer implements OnInit {
 
-  private name: string = "henry";
+  private name = signal("henry");
 
   public get getName() {
-    return this.name
+    return this.name()
   }
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.name += " franz"
+      this.name.update(target => target += " franz")
     }, 2000)
   }
 

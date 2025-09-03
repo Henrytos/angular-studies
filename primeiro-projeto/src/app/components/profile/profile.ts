@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './profile.css'
 })
 export class Profile {
-  private profileUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpKXI8vSC5mYx0YG502nPh6P2TVwvTdIJ5g&s"
-  private username = "henry"
+  private profileUrl = signal("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpKXI8vSC5mYx0YG502nPh6P2TVwvTdIJ5g&s")
+  private username = signal("henry")
 
 
   public get getProfileUrl(): string {
-    return this.profileUrl;
+    return this.profileUrl();
   }
 
   public get getUsername(): string {
-    return this.username;
+    return this.username();
   }
 
 }
