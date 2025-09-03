@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { Footer } from '../footer/footer';
 import { Counter } from '../counter/counter';
 import { Profile } from "../profile/profile";
+import { List } from '../list/list';
 
 @Component({
   selector: 'app-home',
-  imports: [Footer, Counter, Profile],
+  imports: [Footer, Counter, Profile, List],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

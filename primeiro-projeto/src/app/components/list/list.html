@@ -1,0 +1,15 @@
+<p>lista de usuarios</p>
+
+@for (user of getList; track user) {
+
+@if (user == "henry") {
+<p>o goat - {{user}}</p>
+}
+@else {
+<p>{{user}}</p>
+}
+
+}
+@empty {
+<p>lista vazia</p>
+}
