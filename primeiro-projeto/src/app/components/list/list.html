@@ -1,15 +1,30 @@
 <p>lista de usuarios</p>
 
-@for (user of getList; track user) {
+<h5>criar</h5>
+<label for="nome">
+  nome:
 
-@if (user == "henry") {
-<p>o goat - {{user}}</p>
-}
-@else {
-<p>{{user}}</p>
-}
+  <input type="text" id="nome" [(ngModel)]="inputValue" />
+</label>
 
-}
-@empty {
+<h5>atualizar</h5>
+<label for="atualizar-nome">
+  nome:
+  <input type="text" id="atualizar-nome" [(ngModel)]="usernameUpdatedValue" />
+</label>
+
+<label for="id">
+  id:
+  <input type="number" id="id" [(ngModel)]="idValue" />
+</label>
+@if(usernameUpdatedValue!=""){
+<button (click)="updateUser()">atualizar usuario</button>
+} @if (inputValue!="") {
+<button (click)="addUser()">criar usuario</button>
+} @for (user of getList; track user) {
+<p>{{ user.id }}-{{ user.username }}</p>
+<button (click)="removeUser(user.id)">remove</button>
+
+} @empty {
 <p>lista vazia</p>
 }
