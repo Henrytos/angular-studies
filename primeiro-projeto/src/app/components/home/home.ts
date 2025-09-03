@@ -3,10 +3,11 @@ import { Footer } from '../footer/footer';
 import { Counter } from '../counter/counter';
 import { Profile } from "../profile/profile";
 import { List } from '../list/list';
+import { ListCharacters } from '../list-characters/list-characters';
 
 @Component({
   selector: 'app-home',
-  imports: [Footer, Counter, Profile, List],
+  imports: [Footer, Counter, Profile, List, ListCharacters],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
