@@ -1,0 +1,13 @@
+<label for="location-search">Search for a new place</label>
+
+<input id="location-search" #search><button (click)="searchHousingLocations(search.value)">Search</button>
+
+<button (click)="selectAllLocations()">View All</button>
+<button (click)="clearAllLocations()">Clear All</button>
+
+<article *ngFor="let location of results" (click)="selectHousingLocation(location)">
+  <img [src]="location.photo" [alt]="location.name">
+  <p>{{location.name}}</p>
+  <p>{{location.city}}, {{location.state}}</p>
+  <button (click)="selectHousingLocation(location)">View</button>
+</article>
