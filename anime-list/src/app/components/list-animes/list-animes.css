@@ -1,0 +1,52 @@
+.title{
+  margin-top: 48px;
+  padding-left: 12%;
+}
+.animes{
+  width: 100%;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+
+  max-width: 80%;
+  margin: auto;
+}
+
+.anime{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  filter: brightness(70%);
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.anime:hover{
+  filter: brightness(100%);
+  transform: translateY(-1rem) scale(1.1);
+}
+
+.anime img{
+  object-fit: cover;
+  height: 300px;
+  border-radius: 1rem;
+}
+
+@media (min-width: 1000px){
+  .animes{
+  grid-template-columns: repeat(5,1fr);
+}
+}
+
+@media (min-width: 1500px){
+  .animes{
+  grid-template-columns: repeat(6,1fr);
+}
+}
+
+@media (min-width: 2000px){
+  .animes{
+  grid-template-columns: repeat(8,1fr);
+}
+}

@@ -1,0 +1,7 @@
+<main>
+  <app-header></app-header>
+  <app-list-animes (selectAnimeEvent)="selectedAnimeChild($event)"></app-list-animes>
+  <app-footer></app-footer>
+  <app-sheet [animeSelectedTarget]="animeSelected"></app-sheet>
+</main>
+<router-outlet />

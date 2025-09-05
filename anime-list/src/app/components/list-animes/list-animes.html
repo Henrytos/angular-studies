@@ -1,0 +1,14 @@
+<div>
+
+  <h1 class="title">Animes</h1>
+
+  <div class=" animes">
+    @for (anime of getAnimes; track anime.title) {
+    <div class="anime" (click)="selectAnime(anime)">
+      <img [src]="anime.images.jpg.image_url">
+      <h3>{{anime.title}} - {{anime.score}}</h3>
+    </div>
+    }
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+header{
+  width: 100%;
+  height: auto;
+  padding: 10px 30px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+.nav-right{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-right img{
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.links{
+  display: flex;
+  gap: 0.8rem;
+  list-style-type: none;
+}
+
+.link{
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  font-size: 1rem;
+}
+
+.link:hover{
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
+
+.nav-left{
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+  font-size: 2rem;
+}
